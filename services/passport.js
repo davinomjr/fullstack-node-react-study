@@ -20,7 +20,8 @@ passport.use(
     {
       clientID: keys.googleClientID,
       clientSecret: keys.googleClientSecret,
-      callbackURL: '/auth/google/callback', // route for user coming back to application after checking client's ID and secret
+      callbackURL: '/auth/google/callback', 
+      proxy: true
     },
     (accessToken, refreshToken, profile, done) => {
       const id = profile.id;
